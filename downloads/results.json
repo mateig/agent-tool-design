@@ -1,0 +1,229 @@
+{
+  "scope": {
+    "included_tasks": [
+      "tunnel_retrieval",
+      "plate_lifting",
+      "recessed_knob",
+      "two_buttons",
+      "door_prop"
+    ],
+    "excluded_task": "ball_transfer",
+    "exclusion_timing": "post hoc, after viewing the original six-task results",
+    "reason": "Author requested exclusion because of concerns about measurement validity.",
+    "original_records": "Unmodified six-task trial records remain in analysis/ and results/main_v1_final/.",
+    "metric": "retained trial outcomes from the completed evaluation",
+    "source_sha256": {
+      "validated_trials.csv": "7c7b5393fa334bc9726235b9cb87637881e5b40054b7643b587cb5b0d1e6a67f",
+      "trials.csv": "c53cf9f7b15a9769573f542f08d36151418873b42ded4cf80ab29f2ca6b1cce1",
+      "candidates.csv": "248569c10c675620477ac291b65f190550f33ddb2913b56b68619f2b57c069f5"
+    }
+  },
+  "design_runs": 45,
+  "candidate_attempts": 180,
+  "replay_rows_all_conditions": 1800,
+  "overall": {
+    "successes": 376,
+    "trials": 450,
+    "rate": 0.8355555555555556
+  },
+  "first_attempt": {
+    "successes": 315,
+    "trials": 450,
+    "rate": 0.7
+  },
+  "models": {
+    "astra": {
+      "label": "Astra 6",
+      "overall": {
+        "successes": 136,
+        "trials": 150,
+        "rate": 0.9066666666666666
+      },
+      "by_task": {
+        "tunnel_retrieval": {
+          "successes": 30,
+          "trials": 30,
+          "rate": 1.0
+        },
+        "plate_lifting": {
+          "successes": 30,
+          "trials": 30,
+          "rate": 1.0
+        },
+        "recessed_knob": {
+          "successes": 26,
+          "trials": 30,
+          "rate": 0.8666666666666667
+        },
+        "two_buttons": {
+          "successes": 30,
+          "trials": 30,
+          "rate": 1.0
+        },
+        "door_prop": {
+          "successes": 20,
+          "trials": 30,
+          "rate": 0.6666666666666666
+        }
+      },
+      "conditions": {
+        "invented_tool": {
+          "successes": 136,
+          "trials": 150,
+          "rate": 0.9066666666666666
+        },
+        "first_candidate": {
+          "successes": 116,
+          "trials": 150,
+          "rate": 0.7733333333333333
+        },
+        "tool_removed": {
+          "successes": 0,
+          "trials": 150,
+          "rate": 0.0
+        },
+        "generic_rod": {
+          "successes": 0,
+          "trials": 150,
+          "rate": 0.0
+        }
+      }
+    },
+    "sol": {
+      "label": "Sol 6.1",
+      "overall": {
+        "successes": 130,
+        "trials": 150,
+        "rate": 0.8666666666666667
+      },
+      "by_task": {
+        "tunnel_retrieval": {
+          "successes": 30,
+          "trials": 30,
+          "rate": 1.0
+        },
+        "plate_lifting": {
+          "successes": 30,
+          "trials": 30,
+          "rate": 1.0
+        },
+        "recessed_knob": {
+          "successes": 30,
+          "trials": 30,
+          "rate": 1.0
+        },
+        "two_buttons": {
+          "successes": 30,
+          "trials": 30,
+          "rate": 1.0
+        },
+        "door_prop": {
+          "successes": 10,
+          "trials": 30,
+          "rate": 0.3333333333333333
+        }
+      },
+      "conditions": {
+        "invented_tool": {
+          "successes": 130,
+          "trials": 150,
+          "rate": 0.8666666666666667
+        },
+        "first_candidate": {
+          "successes": 118,
+          "trials": 150,
+          "rate": 0.7866666666666666
+        },
+        "tool_removed": {
+          "successes": 0,
+          "trials": 150,
+          "rate": 0.0
+        },
+        "generic_rod": {
+          "successes": 0,
+          "trials": 150,
+          "rate": 0.0
+        }
+      }
+    },
+    "opus": {
+      "label": "Opus 5.5",
+      "overall": {
+        "successes": 110,
+        "trials": 150,
+        "rate": 0.7333333333333333
+      },
+      "by_task": {
+        "tunnel_retrieval": {
+          "successes": 30,
+          "trials": 30,
+          "rate": 1.0
+        },
+        "plate_lifting": {
+          "successes": 30,
+          "trials": 30,
+          "rate": 1.0
+        },
+        "recessed_knob": {
+          "successes": 20,
+          "trials": 30,
+          "rate": 0.6666666666666666
+        },
+        "two_buttons": {
+          "successes": 30,
+          "trials": 30,
+          "rate": 1.0
+        },
+        "door_prop": {
+          "successes": 0,
+          "trials": 30,
+          "rate": 0.0
+        }
+      },
+      "conditions": {
+        "invented_tool": {
+          "successes": 110,
+          "trials": 150,
+          "rate": 0.7333333333333333
+        },
+        "first_candidate": {
+          "successes": 81,
+          "trials": 150,
+          "rate": 0.54
+        },
+        "tool_removed": {
+          "successes": 0,
+          "trials": 150,
+          "rate": 0.0
+        },
+        "generic_rod": {
+          "successes": 0,
+          "trials": 150,
+          "rate": 0.0
+        }
+      }
+    }
+  },
+  "conditions": {
+    "invented_tool": {
+      "successes": 376,
+      "trials": 450,
+      "rate": 0.8355555555555556
+    },
+    "first_candidate": {
+      "successes": 315,
+      "trials": 450,
+      "rate": 0.7
+    },
+    "tool_removed": {
+      "successes": 0,
+      "trials": 450,
+      "rate": 0.0
+    },
+    "generic_rod": {
+      "successes": 0,
+      "trials": 450,
+      "rate": 0.0
+    }
+  }
+}

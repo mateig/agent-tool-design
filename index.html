@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Can frontier models design tools and robot movements? Five manipulation tasks with a simulated Franka Panda, with paper, code, and data.">
+  <title>Can Frontier Agents Invent Robot Tools?</title>
+  <link rel="canonical" href="https://mateig.github.io/agent-tool-design/">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Can Frontier Agents Invent Robot Tools?</h1>
+      <p class="author">Matei Gardea</p>
+      <p class="affiliation">Department of Electrical Engineering and Computer Sciences<br>University of California, Berkeley</p>
+      <nav aria-label="Project downloads">
+        <a href="downloads/paper.pdf">Paper <span>(PDF)</span></a>
+        <a href="downloads/code.zip" download>Code <span>(ZIP)</span></a>
+      </nav>
+    </header>
+
+    <section aria-labelledby="abstract-heading">
+      <h2 id="abstract-heading">Abstract</h2>
+      <p>We study whether Opus 5.5, Astra 6, and Sol 6.1 can design tools for five manipulation tasks using a simulated Franka Panda. Each model proposes a tool and a sequence of robot movements, tests them in simulation, and revises its proposal over four attempts. Averaged across the five tasks, success rates are 90.7% for Astra 6, 86.7% for Sol 6.1, 73.3% for Opus 5.5.</p>
+    </section>
+
+    <section aria-labelledby="results-heading">
+      <h2 id="results-heading">Results</h2>
+      <p>Each model produces three independent designs per task. Each selected design is tested in ten scenes with small position changes.</p>
+      <div class="table-scroll" role="region" aria-label="Task success rates" tabindex="0">
+        <table>
+          <caption>Success rate (%) over 30 trials per model and task.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Model</th>
+              <th scope="col">Tunnel<br>retrieval</th>
+              <th scope="col">Plate<br>lifting</th>
+              <th scope="col">Recessed<br>knob</th>
+              <th scope="col">Two<br>buttons</th>
+              <th scope="col">Door<br>prop</th>
+              <th scope="col">Mean</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Astra 6</th><td><strong>100.0</strong></td><td><strong>100.0</strong></td><td>86.7</td><td><strong>100.0</strong></td><td><strong>66.7</strong></td><td><strong>90.7</strong></td></tr>
+            <tr><th scope="row">Sol 6.1</th><td><strong>100.0</strong></td><td><strong>100.0</strong></td><td><strong>100.0</strong></td><td><strong>100.0</strong></td><td>33.3</td><td>86.7</td></tr>
+            <tr><th scope="row">Opus 5.5</th><td><strong>100.0</strong></td><td><strong>100.0</strong></td><td>66.7</td><td><strong>100.0</strong></td><td>0.0</td><td>73.3</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="rollouts-heading">
+      <h2 id="rollouts-heading">Rollouts</h2>
+      <p>One example from each model on each task.</p>
+      <div class="table-scroll" role="region" aria-label="Rollouts by task and model" tabindex="0">
+        <table class="rollout-table">
+          <thead>
+            <tr><th scope="col">Model</th><th scope="col">Tunnel retrieval</th><th scope="col">Plate lifting</th><th scope="col">Recessed knob</th><th scope="col">Two buttons</th><th scope="col">Door prop</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Astra 6</th>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/tunnel_retrieval__astra.jpg" aria-label="Tunnel retrieval, Astra 6">
+                  <source src="assets/videos/tunnel_retrieval__astra.mp4" type="video/mp4">
+                  <a href="assets/videos/tunnel_retrieval__astra.mp4">Download video</a>
+                </video>
+              </td>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/plate_lifting__astra.jpg" aria-label="Plate lifting, Astra 6">
+                  <source src="assets/videos/plate_lifting__astra.mp4" type="video/mp4">
+                  <a href="assets/videos/plate_lifting__astra.mp4">Download video</a>
+                </video>
+              </td>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/recessed_knob__astra.jpg" aria-label="Recessed knob, Astra 6">
+                  <source src="assets/videos/recessed_knob__astra.mp4" type="video/mp4">
+                  <a href="assets/videos/recessed_knob__astra.mp4">Download video</a>
+                </video>
+              </td>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/two_buttons__astra.jpg" aria-label="Two buttons, Astra 6">
+                  <source src="assets/videos/two_buttons__astra.mp4" type="video/mp4">
+                  <a href="assets/videos/two_buttons__astra.mp4">Download video</a>
+                </video>
+              </td>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/door_prop__astra.jpg" aria-label="Door prop, Astra 6">
+                  <source src="assets/videos/door_prop__astra.mp4" type="video/mp4">
+                  <a href="assets/videos/door_prop__astra.mp4">Download video</a>
+                </video>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Sol 6.1</th>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/tunnel_retrieval__sol.jpg" aria-label="Tunnel retrieval, Sol 6.1">
+                  <source src="assets/videos/tunnel_retrieval__sol.mp4" type="video/mp4">
+                  <a href="assets/videos/tunnel_retrieval__sol.mp4">Download video</a>
+                </video>
+              </td>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/plate_lifting__sol.jpg" aria-label="Plate lifting, Sol 6.1">
+                  <source src="assets/videos/plate_lifting__sol.mp4" type="video/mp4">
+                  <a href="assets/videos/plate_lifting__sol.mp4">Download video</a>
+                </video>
+              </td>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/recessed_knob__sol.jpg" aria-label="Recessed knob, Sol 6.1">
+                  <source src="assets/videos/recessed_knob__sol.mp4" type="video/mp4">
+                  <a href="assets/videos/recessed_knob__sol.mp4">Download video</a>
+                </video>
+              </td>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/two_buttons__sol.jpg" aria-label="Two buttons, Sol 6.1">
+                  <source src="assets/videos/two_buttons__sol.mp4" type="video/mp4">
+                  <a href="assets/videos/two_buttons__sol.mp4">Download video</a>
+                </video>
+              </td>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/door_prop__sol.jpg" aria-label="Door prop, Sol 6.1">
+                  <source src="assets/videos/door_prop__sol.mp4" type="video/mp4">
+                  <a href="assets/videos/door_prop__sol.mp4">Download video</a>
+                </video>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Opus 5.5</th>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/tunnel_retrieval__opus.jpg" aria-label="Tunnel retrieval, Opus 5.5">
+                  <source src="assets/videos/tunnel_retrieval__opus.mp4" type="video/mp4">
+                  <a href="assets/videos/tunnel_retrieval__opus.mp4">Download video</a>
+                </video>
+              </td>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/plate_lifting__opus.jpg" aria-label="Plate lifting, Opus 5.5">
+                  <source src="assets/videos/plate_lifting__opus.mp4" type="video/mp4">
+                  <a href="assets/videos/plate_lifting__opus.mp4">Download video</a>
+                </video>
+              </td>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/recessed_knob__opus.jpg" aria-label="Recessed knob, Opus 5.5">
+                  <source src="assets/videos/recessed_knob__opus.mp4" type="video/mp4">
+                  <a href="assets/videos/recessed_knob__opus.mp4">Download video</a>
+                </video>
+              </td>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/two_buttons__opus.jpg" aria-label="Two buttons, Opus 5.5">
+                  <source src="assets/videos/two_buttons__opus.mp4" type="video/mp4">
+                  <a href="assets/videos/two_buttons__opus.mp4">Download video</a>
+                </video>
+              </td>
+              <td>
+                <video controls playsinline preload="none" width="720" height="492" poster="assets/videos/door_prop__opus.jpg" aria-label="Door prop, Opus 5.5">
+                  <source src="assets/videos/door_prop__opus.mp4" type="video/mp4">
+                  <a href="assets/videos/door_prop__opus.mp4">Download video</a>
+                </video>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="video-note">The Opus door video is an additional attempt with a larger response budget. This attempt is separate from the trials reported above.</p>
+    </section>
+
+    <section aria-labelledby="citation-heading">
+      <div class="citation-heading">
+        <h2 id="citation-heading">Citation</h2>
+        <button id="copy-citation" type="button" hidden>Copy BibTeX</button>
+      </div>
+      <pre id="citation">@misc{gardea2026agenttooldesign,
+  title = {Can Frontier Agents Invent Robot Tools?},
+  author = {Gardea, Matei},
+  year = {2026},
+  url = {https://mateig.github.io/agent-tool-design/}
+}</pre>
+      <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+</body>
+</html>
